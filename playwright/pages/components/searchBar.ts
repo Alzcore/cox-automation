@@ -5,13 +5,13 @@ export class SearchBar {
 	readonly make: Locator
 	readonly model: Locator
 	readonly zipCode: Locator
-	readonly search: Locator
+	readonly searchButton: Locator
 
 	constructor(readonly page: Page) {
 		this.container = page.getByTestId('SearchBadge')
 		this.make = page.getByLabel('Select A Make')
 		this.model = page.getByLabel('Select A Model')
 		this.zipCode = page.getByTestId('standardZipInput')
-		this.search = page.locator('id=search')
+		this.searchButton = page.locator('id=search')
 	}
 }
