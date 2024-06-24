@@ -4,6 +4,6 @@ export class AllCars {
 	readonly heading: Locator
 
 	constructor(readonly page: Page) {
-		this.heading = page.getByTestId('heading')
+		this.heading = page.getByTestId('heading').first()
 	}
 }
