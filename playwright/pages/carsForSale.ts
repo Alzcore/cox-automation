@@ -7,4 +7,8 @@ export class CarsForSale {
 	constructor(readonly page: Page) {
 		this.searchBar = new SearchBar(page)
 	}
+
+	async goto() {
+		await this.page.goto('cars-for-sale')
+	}
 }
