@@ -1,4 +1,4 @@
 import { mergeTests } from '@playwright/test'
-import { carsForSaleTest } from './fixtures'
+import { carsForSaleTest, allCarsTest } from './fixtures'
 
-export const test = mergeTests(carsForSaleTest)
+export const test = mergeTests(carsForSaleTest, allCarsTest)
