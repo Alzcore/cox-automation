@@ -10,7 +10,8 @@ export default defineConfig({
 	reporter: 'html',
 	use: {
 		baseURL: 'https://www.autotrader.com',
-		trace: 'on-first-retry'
+		trace: 'on-first-retry',
+		testIdAttribute: 'data-cmp'
 	},
 	projects: [
 		{
