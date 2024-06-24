@@ -3,14 +3,12 @@ import { test } from '../main'
 
 test('Search for Lamborghini', async ({
 	carsForSaleVisitor,
-	allCarsVisitor
+	allCarsVisitor,
+	constants
 }) => {
 	await carsForSaleVisitor.goto()
-	await carsForSaleVisitor.searchBar.make.selectOption('Lamborghini')
+	const model = constants.makesAndModels.lamborghini.Aventador
+	await carsForSaleVisitor.searchBar.search(model)
 
-	await carsForSaleVisitor.searchBar.search.click()
-
-	await carsForSaleVisitor.page.waitForURL(/lamborghini/)
-
-	await expect(allCarsVisitor.heading).toContainText('Lamborghini')
+	await expect(allCarsVisitor.heading).toContainText(model)
 })
